@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -36,3 +37,43 @@
     <li>Marco</li>
 </body>
 </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Document </title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("body").css("font-style","italic");
+      var nome=$("#prof").text();
+      $("#prof")
+        .css("text-decoration","underline")
+        .css ({"color":"white","background-color":"black","border":"2px solid orange"})
+
+        .text("Professora "+nome);
+
+      $(".alunos").css("font-weight","bold");
+    });
+  $(window).on('load',function(){
+    $("img").attr("src","http://picsum.photos/500?random");
+  });
+  </script>
+</head>
+<body>
+  <img src="http://www.clipartbest.com/cliparts/niE/5AA/niE5AAMdT.jpg">
+  <p id="prof">Isabel Fernandes</p>
+  <ul class="alunos">
+    <li>#######################</li>
+    <li>André</li>
+    <li>Dima</li>
+    <li>Diogo</li>
+    <li>Francisco</li>
+    <li>Gerson</li>
+    <li>Gonçalo</li>
+    <li>Luís</li>
+    <li>Mamadu</li>
+    <li>Marco</li>
+</body>
+</html>
+

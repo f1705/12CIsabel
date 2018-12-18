@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").unwrap();
+    });
+});
+</script>
+<style>
+div{background-color: yellow;}
+article{background-color: pink;}
+</style>
+</head>
+<body>
+
+<div>
+  <p>Este é um parágrafo dentro de um elemento div.</p>
+</div>
+
+<article>
+  <p>Este é um parágrafo dentro de um elemento de artigo.</p>
+</article>
+
+<button>Remova o elemento pai de cada elemento p</button>
+
+</body>
+</html>

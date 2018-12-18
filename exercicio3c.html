@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#nome").hide();
+        $("#email").hide();
+        $("#login").hide();
+        $("#pass").hide();
+             
+        $("input").focus(function(){
+            $(this).css("background-color","#ff69b4");
+        });
+        $("input").blur(function(){
+            $(this).css("background-color","#ffffff");
+        });  
+        
+
+       $("img").click(function() {
+            $( "img" ).slideUp( "slow", function() { 
+                $("#nome").show();
+            });
+ 
+        $("#nome").change(function(){
+            $("#email").show();
+            $("#cx_email").focus();
+        }); 
+        $("#email").change(function(){
+            $("#login").show();
+            $("#cx_login").focus();
+        });  
+        $("#login").change(function(){
+            $("#pass").show();
+            $("#cx_pass").focus();
+        });    
+        $("#pass").change(function(){
+            $("#nome").fadeOut("slow");
+            $("#email").fadeOut(3000);
+            $("#login").fadeOut(5000);
+            $("#pass").fadeOut(10000);
+            $("img").slideDown( 10000 ); //.slideUp( 300 ).delay( 800 ).fadeIn( 400 );          
+        });  
+                    
+    //INCLUIR EFEITO ANIMATE           
+});
+    });
+    </script>
+</head>
+<body>
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;Página de Registo</h1>
+    <img src="https://websitesetup.org/wp-content/uploads/2016/07/Start-Here.png">
+    <p id="nome">Nome: <input type="text" name="NomeCompleto"></p>
+    <p id="email">Email: <input id="cx_email" type="text" name="email"></p>
+    <p id="login">Login: <input id="cx_login" type="text" name="login"></p>
+    <p id="pass">Password: <input id="cx_pass" type="password" name="pass"></p>
+</body>
+</html>

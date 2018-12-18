@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    //https://www.youtube.com/watch?v=70MvTvvmd-M
+    //https://www.youtube.com/watch?v=qxtER1-qLBo
+    //https://www.youtube.com/watch?v=Gq3Aez8sVpM
+    $(document).ready(function(){
+        //$("h2").siblings().css("background-color", "pink");
+        //$("span").siblings().css({"border":"solid gray","background-color":"pink"});
+        //$("#filhos").children().css({"border":"solid gray","background-color":"pink"});
+        //$("span").first().css({"border":"solid gray","background-color":"pink"});
+        //$("span").last().css({"border":"solid gray","background-color":"pink"});
+        //$("span").eq(2).css({"border":"solid gray","background-color":"pink"});
+        //$("h2").eq(5).css({"border":"solid gray","background-color":"pink"});
+        //$("h3").siblings().css({"border":"solid gray","background-color":"pink"});
+        //$("h3").siblings().not("span").css({"border":"solid gray","background-color":"pink"});
+        //$("div").find(".avos").css({"border":"solid gray","background-color":"pink"});
+        $("div").find("h2").not(".patern").css({"border":"solid gray","background-color":"pink"});
+    });
+    </script>
+</head>
+<body>
+    <div id="familia1">
+        <h1>Família 1!</h1>
+        <div class="avos">
+            <h2>Avô Materno</h2>
+            <h2>Avó Materna</h2>
+            <h2 class="patern">Avô Paterno</h2>
+            <h2 class="patern">Avó Paterna</h2>
+        </div>
+        <div id="descendentes">
+            <h3>Pai</h3>
+            <h3>Mãe</h3>
+            <span>Irmão mais novo  &emsp;</span>
+            <span>Irmão do meio  &emsp;</span>
+            <span>Irmão mais velho  &emsp;</span>
+        </div>
+    </div><br>
+    <div id="familia2">
+        <h1>Família 2!</h1>
+        <div class="avos">
+            <h2>Avô Materno</h2>
+            <h2>Avó Materna</h2>
+            <h2 class="patern">Avô Paterno</h2>
+            <h2 class="patern">Avó Paterna</h2>
+        </div>
+        <div id="descendentes">
+            <h3>Pai</h3>
+            <h3>Mãe</h3>
+            <span>Irmão mais novo  &emsp;</span>
+            <span>Irmão do meio  &emsp;</span>
+            <span>Irmão mais velho</span>
+        </div>
+    </div>
+</body>
+</html>
