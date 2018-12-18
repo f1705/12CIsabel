@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    //https://learn.jquery.com/plugins/basic-plugin-creation/
+    $(document).ready(function(){
+        //$( "p" ).css( "color", "red" );
+
+        $.fn.esverdeartexto = function(){
+            this.css("color","green");
+        };  
+        
+        $.fn.esverdearfundo = function(){
+            this.css("background-color","green");
+        };
+        $("#nome").esverdeartexto();
+        $("#email").esverdearfundo(); 
+        $("#login").esverdeartexto(); 
+        $("#pass").esverdearfundo(); 
+
+        $("button").click(function(){
+            if ($('input[name="pass"]').val() != $('input[name="repass"]').val())
+                {
+                    $('input[name="pass"]').val("");
+                    $('input[name="repass"]').val("");
+                }else
+                    alert("Registo efetuado com sucesso!");
+        });
+    });
+//upgrade: colocar a utilização da função dentro do IF
+    </script>
+</head>
+<body>
+    <pre> ------- Página de Registo ------- </pre>
+    <p id="nome">Nome: <input type="text" name="NomeCompleto"></p>
+    <p id="email">Email: <input id="cx_email" type="text" name="email"></p>
+    <p id="login">Login: <input id="cx_login" type="text" name="login"></p>
+    <p id="pass">Password: <input id="cx_pass" type="password" name="pass"></p>
+    <p id="repass">Re-Password: <input id="cx_pass" type="password" name="repass"></p>
+    <pre> --------------------------------- </pre>
+    <button>Início >></button>
+</body>
+</html>
